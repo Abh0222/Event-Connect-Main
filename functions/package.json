@@ -1,0 +1,34 @@
+{
+  "name": "vibesphere-functions",
+  "version": "1.0.0",
+  "description": "Cloud Functions for VibeSphere",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "dependencies": {
+    "firebase-admin": "^11.11.1",
+    "firebase-functions": "^4.5.0",
+    "stripe": "^14.9.0",
+    "openai": "^4.20.1",
+    "nodemailer": "^6.9.7",
+    "sharp": "^0.32.6",
+    "qrcode": "^1.5.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "@types/node": "^20.8.7",
+    "@types/nodemailer": "^6.4.14",
+    "@types/qrcode": "^1.5.5"
+  },
+  "private": true
+}
